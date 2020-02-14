@@ -14,9 +14,7 @@ def is_happy(num):
     while num != 1 and num != 4:
         num = [int(x) for x in str(num)]
 
-        summ = sum(map(lambda i: i*i, num))
-
-        num = summ
+        num = sum(map(lambda i: i*i, num))
     
     if num == 1:
         return True
