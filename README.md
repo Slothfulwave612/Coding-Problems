@@ -1,2 +1,2 @@
-# Leetcode-Problems
-This repository contains Leetcode problems and their solutions.
+# Coding-Problems
+This repository contains various coding problems from different platform and their required solution.
