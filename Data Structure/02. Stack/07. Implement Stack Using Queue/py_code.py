@@ -73,8 +73,6 @@ obj.display()
 obj.enqueue(5)
 obj.display()
 
-obj.enqueue(6)      ## Overflow
-
 obj.dequeue()
 obj.display()
 
