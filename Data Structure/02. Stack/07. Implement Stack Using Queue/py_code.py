@@ -14,8 +14,6 @@ class Queue:
         '''
         self.queue = []
         self.queue_2 = []
-        self.top = -1
-        self.max_size = 5
 
     def enqueue(self, item):
         '''
@@ -25,16 +23,11 @@ class Queue:
         self -- represents the object of the class.
         item -- integer value to be appended to the stack.
         '''
-        if self.top == self.max_size - 1:
-            print('Stack Overflow')
-        else:
-            self.top += 1
+        self.queue_2.append(item)
 
-            self.queue_2.append(item)
-
-            while self.queue_2 != []:
-                pop_item = self.queue_2.pop()
-                self.queue.append(pop_item)
+        while self.queue_2 != []:
+            pop_item = self.queue_2.pop()
+            self.queue.append(pop_item)
     
     def dequeue(self):
         '''
@@ -59,7 +52,7 @@ class Queue:
         if self.queue == []:
             print('Underflow')
         else:
-            for i in range(self.top, -1, -1):
+            for i in range(len(self.queue) - 1, -1, -1):
                 print(self.queue[i], end=' ')
             print()
 
