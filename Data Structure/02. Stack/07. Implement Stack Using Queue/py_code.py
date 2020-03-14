@@ -1,6 +1,6 @@
 ## Implementing Stack Using Queues
 
-class Stack:
+class Queue:
     '''
     This class contains methods for implementation of stack using Queue data structure.
     '''
@@ -63,7 +63,7 @@ class Stack:
                 print(self.queue[i], end=' ')
             print()
 
-obj = Stack()
+obj = Queue()
 
 obj.enqueue(1)
 obj.display()
