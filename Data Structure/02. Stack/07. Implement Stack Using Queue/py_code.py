@@ -12,8 +12,8 @@ class Stack:
         Argument:
         self -- represents the object of the class.
         '''
-        self.stack = []
-        self.stack_2 = []
+        self.queue = []
+        self.queue_2 = []
         self.top = -1
         self.max_size = 5
 
@@ -30,11 +30,11 @@ class Stack:
         else:
             self.top += 1
 
-            self.stack_2.append(item)
+            self.queue_2.append(item)
 
-            while self.stack_2 != []:
-                pop_item = self.stack_2.pop()
-                self.stack.append(pop_item)
+            while self.queue_2 != []:
+                pop_item = self.queue_2.pop()
+                self.queue.append(pop_item)
     
     def dequeue(self):
         '''
@@ -43,10 +43,10 @@ class Stack:
         Argument:
         self -- represents the object of the class.
         '''
-        if self.stack == []:
+        if self.queue == []:
             print('Underflow')
         else:   
-            self.stack.pop()
+            self.queue.pop()
             self.top -= 1
     
     def display(self):
@@ -56,11 +56,11 @@ class Stack:
         Argument:
         self -- represents the object of the class.
         '''
-        if self.stack == []:
+        if self.queue == []:
             print('Underflow')
         else:
             for i in range(self.top, -1, -1):
-                print(self.stack[i], end=' ')
+                print(self.queue[i], end=' ')
             print()
 
 obj = Stack()
