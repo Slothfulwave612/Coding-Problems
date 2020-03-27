@@ -90,7 +90,9 @@ class LinkedList:
                     print('Key not found')
                     return
             
+            del_node = temp.next
             temp.next = temp.next.next
+            del_node = None
 
 l_list = LinkedList()
 
