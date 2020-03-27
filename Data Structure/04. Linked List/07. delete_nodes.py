@@ -1,4 +1,5 @@
 ## function to delete a Linked List
+## Iterate through the linked list and delete all the nodes one by one
 
 class Node:
     '''
