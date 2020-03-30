@@ -22,7 +22,7 @@ def find_subarray(array, length, req_sum):
             return (0, i)
         
         if curr_sum - req_sum in map_dict:
-            return(map_dict[curr_sum - req_sum], i)
+            return(map_dict[curr_sum - req_sum] + 1, i)
         
         map_dict[curr_sum] = i
     
