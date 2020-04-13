@@ -24,6 +24,6 @@ def all_permute(array, front, rare):
             all_permute(array, front+1, rare)
             array[i], array[front] = array[front], array[i]     ## backtrack
         
-string = 'ABCA'
+string = 'ABC'
 array = list(string)
 all_permute(array, 0, len(string)-1)
