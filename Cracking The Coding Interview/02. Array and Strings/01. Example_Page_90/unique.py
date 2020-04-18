@@ -1,5 +1,7 @@
 '''
 Is Unique: Implement an algorithm to determine if a string has all unique characters.
+
+Without Data Structure can be done by using sorting(N log N).
 '''
 
 def check_unique(string):
