@@ -1,0 +1,48 @@
+'''
+Sort Stack: Write a program to sort a stack such that the smallest items are on the top. You can use
+an additional temporary stack, but you may not copy the elements into any other data structure
+(such as an array). The stack supports the following operations: push, pop, peek, and isEmpty.
+
+Only defining the sort function.
+'''
+
+def sort_stack(stack):
+    '''
+    Function to sort a stack.
+
+    Argument:
+    stack -- list, stack containing elements.
+
+    Returns:
+    temp_stack -- list, stack containing element in sorted order.
+    '''
+    if stack == []:
+        print('Stack Overflow')
+        return
+    
+    temp_stack = []
+
+    while stack != []:
+        stack_elem = stack.pop()
+
+        while temp_stack != [] and temp_stack[-1] < stack_elem:
+            temp_elem = temp_stack.pop()
+            stack.append(temp_elem)
+        
+        temp_stack.append(stack_elem)
+    
+    return temp_stack
+
+
+print(sort_stack([5, 3, 1, 2, 4]))
+
+'''
+With the mergesort solution, we would create two extra stacks and divide the stack into two parts. We
+would recursively sort each stack, and then merge them back together in sorted order into the original
+stack. Note that this would require the creation of two additional stacks per level of recursion.
+
+With the quicksort solution, we would create two additional stacks and divide the stack into the two stacks
+based on a pivot element. The two stacks would be recursively sorted, and then merged back together
+into the original stack. Like the earlier solution, this one involves creating two additional stacks per level of
+recursion. 
+'''
