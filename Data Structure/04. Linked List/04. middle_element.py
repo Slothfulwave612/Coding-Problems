@@ -79,18 +79,18 @@ class LinkedList:
         self.traverse()
         ## shows all element in the linked list
 
-        slow_pointer = self.head
         fast_pointer = self.head
+        slow_pointer = self.head
 
-        while fast_pointer.next != None:
-            fast_pointer = fast_pointer.next
-            if fast_pointer.next == None:
-                break
+        while fast_pointer != None and fast_pointer.next != None:
+            fast_pointer = fast_pointer.next.next
 
-            fast_pointer = fast_pointer.next
+            if fast_pointer == None:
+                return slow_pointer
+
             slow_pointer = slow_pointer.next
         
-        return slow_pointer.data
+        return slow_pointer
 
 l_list = LinkedList()
 
